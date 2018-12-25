@@ -1,6 +1,6 @@
 package com.reigninbinary.bloodscribe.db.tables;
 
-public class UserIdentityTypes {
+public class UserIdentityTypesTable {
 	
 	public enum IdentityTypes {
 		
@@ -39,7 +39,4 @@ public class UserIdentityTypes {
 			this.label = label;
 		}
 	}
-
-
-
 }

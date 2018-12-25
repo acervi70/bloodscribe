@@ -6,7 +6,7 @@ public class UserProfileItem {
 	private int userId;
 	private int itemId;
 	private String itemValue;
-	private UserProfileItemType userProfileItemType;
+	private int userProfileItemTypeId;
 	
 	public int getUserId() {
 		return userId;
@@ -29,10 +29,11 @@ public class UserProfileItem {
 		this.itemValue = itemValue;
 	}
 	
-	public UserProfileItemType getUserProfileItemType() {
-		return userProfileItemType;
+	public int getUserProfileItemTypeId() {
+		return userProfileItemTypeId;
 	}
-	public void setUserProfileItemType(UserProfileItemType userProfileItemType) {
-		this.userProfileItemType = userProfileItemType;
+	public void setUserProfileItemTypeId(int userProfileItemTypeId) {
+		
+		this.userProfileItemTypeId = userProfileItemTypeId;
 	}
 }
