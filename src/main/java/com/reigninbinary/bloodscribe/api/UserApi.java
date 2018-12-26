@@ -11,8 +11,8 @@ import com.reigninbinary.bloodscribe.db.dto.UserProfileItem;
 import com.reigninbinary.bloodscribe.db.dto.UserProfileItemType;
 import com.reigninbinary.bloodscribe.db.util.DatabaseUtils;
 import com.reigninbinary.bloodscribe.db.util.UserIdentity;
-import com.reigninbinary.bloodscribe.providers.BloodscribeProviders;
 import com.reigninbinary.bloodscribe.providers.UserProvider;
+import com.reigninbinary.bloodscribe.providers.UserProviderImpl;
 
 
 public class UserApi implements UserProvider {
@@ -21,7 +21,7 @@ public class UserApi implements UserProvider {
 	
 	public UserApi() throws BloodscribeException {
 		
-		userProvider = BloodscribeProviders.getUserProvider();
+		userProvider = new UserProviderImpl();
 	}
 	
 	@Override

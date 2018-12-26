@@ -5,8 +5,8 @@ import java.util.List;
 import com.reigninbinary.bloodscribe.BloodscribeException;
 import com.reigninbinary.bloodscribe.db.dto.GameWorld;
 import com.reigninbinary.bloodscribe.db.dto.GameWorldDescription;
-import com.reigninbinary.bloodscribe.providers.BloodscribeProviders;
 import com.reigninbinary.bloodscribe.providers.GameWorldProvider;
+import com.reigninbinary.bloodscribe.providers.GameWorldProviderImpl;
 
 
 public class GameWorldApi implements GameWorldProvider {
@@ -15,7 +15,7 @@ public class GameWorldApi implements GameWorldProvider {
 	
 	public GameWorldApi() throws BloodscribeException {
 		
-		gameWorldProvider = BloodscribeProviders.getGameWorldProvider();
+		gameWorldProvider = new GameWorldProviderImpl();
 	}
 
 	@Override

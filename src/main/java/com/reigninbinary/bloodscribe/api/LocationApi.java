@@ -8,8 +8,8 @@ import com.reigninbinary.bloodscribe.db.dto.GameWorldLocation;
 import com.reigninbinary.bloodscribe.db.dto.GameWorldLocationType;
 import com.reigninbinary.bloodscribe.db.dto.LocationDescription;
 import com.reigninbinary.bloodscribe.db.dto.LocationTimeline;
-import com.reigninbinary.bloodscribe.providers.BloodscribeProviders;
 import com.reigninbinary.bloodscribe.providers.LocationProvider;
+import com.reigninbinary.bloodscribe.providers.LocationProviderImpl;
 
 
 public class LocationApi implements LocationProvider {
@@ -18,7 +18,7 @@ public class LocationApi implements LocationProvider {
 	
 	public LocationApi() throws BloodscribeException {
 		
-		locationProvider = BloodscribeProviders.getLocationProvider();
+		locationProvider = new LocationProviderImpl();
 	}
 
 	@Override
