@@ -49,7 +49,6 @@ public class GameWorldProviderImpl implements GameWorldProvider {
 		return GameWorldProviderInstance.INSTANCE;
 	}
 
-
 	@Override
 	public GameWorld getGameWorldById(int idGameWorld) throws BloodscribeException {
 		
