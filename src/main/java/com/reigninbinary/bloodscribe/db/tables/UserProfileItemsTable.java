@@ -23,7 +23,7 @@ public class UserProfileItemsTable {
 		private String label;
 		
 		Columns(int index, String label) {
-			
+			this.index = index;
 			this.label = label;
 		}
 	}

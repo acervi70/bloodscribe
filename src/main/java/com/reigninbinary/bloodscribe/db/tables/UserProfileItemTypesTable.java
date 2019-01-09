@@ -21,8 +21,8 @@ public class UserProfileItemTypesTable {
 		private int index;
 		private String label;
 		
-		Columns(int index, String label) {
-			
+		Columns(int index, String label) {		
+			this.index = index;
 			this.label = label;
 		}
 	}

@@ -4,17 +4,16 @@ public class UserIdentityTypesTable {
 	
 	public enum IdentityTypes {
 		
-		EMAIL(1),
-		GOOGLE(2),
-		FACEBOOK(3);
+		EMAIL		(1),
+		GOOGLE		(2),
+		FACEBOOK	(3),
+		COGNITO		(4);
 		
 		private int typeId;
 		
 		public int typeId() { return typeId; }
 		
-		IdentityTypes(int type_id) {
-			
-		}
+		IdentityTypes(int type_id) { typeId = type_id; }
 	}
 	
 	public enum Columns {
@@ -35,7 +34,7 @@ public class UserIdentityTypesTable {
 		private String label;
 		
 		Columns(int index, String label) {
-			
+			this.index = index;
 			this.label = label;
 		}
 	}
