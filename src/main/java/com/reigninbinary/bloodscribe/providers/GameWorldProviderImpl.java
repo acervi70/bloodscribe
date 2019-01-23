@@ -8,6 +8,7 @@ import org.apache.commons.lang3.StringUtils;
 import com.reigninbinary.bloodscribe.BloodscribeException;
 import com.reigninbinary.bloodscribe.db.dto.GameWorld;
 import com.reigninbinary.bloodscribe.db.dto.GameWorldDescription;
+import com.reigninbinary.bloodscribe.db.dto.User;
 import com.reigninbinary.core.CoreConfig;
 
 
@@ -15,8 +16,8 @@ public class GameWorldProviderImpl implements GameWorldProvider {
 
     private static class GameWorldProviderInstance {
     	
-    	private static GameWorldProvider INSTANCE = null;
-    	private static BloodscribeException EXCEPTION = null;
+    	private static GameWorldProvider 	INSTANCE 	= null;
+    	private static BloodscribeException EXCEPTION 	= null;
     	
         static {
     		try {		
@@ -74,9 +75,15 @@ public class GameWorldProviderImpl implements GameWorldProvider {
 	}
 
 	@Override
-	public void saveGameWorld(GameWorld gameWorld) throws BloodscribeException {
+	public void createGameWorld(User user, GameWorld gameWorld) throws BloodscribeException {
 		
-		getInstance().saveGameWorld(gameWorld);
+		getInstance().createGameWorld(user, gameWorld);
+	}
+
+	@Override
+	public void updateGameWorld(GameWorld gameWorld) throws BloodscribeException {
+		
+		getInstance().updateGameWorld(gameWorld);
 	}
 
 	@Override

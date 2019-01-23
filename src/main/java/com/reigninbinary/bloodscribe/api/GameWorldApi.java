@@ -5,6 +5,7 @@ import java.util.List;
 import com.reigninbinary.bloodscribe.BloodscribeException;
 import com.reigninbinary.bloodscribe.db.dto.GameWorld;
 import com.reigninbinary.bloodscribe.db.dto.GameWorldDescription;
+import com.reigninbinary.bloodscribe.db.dto.User;
 import com.reigninbinary.bloodscribe.providers.GameWorldProvider;
 import com.reigninbinary.bloodscribe.providers.GameWorldProviderImpl;
 
@@ -43,9 +44,15 @@ public class GameWorldApi implements GameWorldProvider {
 	}
 
 	@Override
-	public void saveGameWorld(GameWorld gameWorld) throws BloodscribeException {
+	public void updateGameWorld(GameWorld gameWorld) throws BloodscribeException {
 
-		gameWorldProvider.saveGameWorld(gameWorld);
+		gameWorldProvider.updateGameWorld(gameWorld);
+	}
+
+	@Override
+	public void createGameWorld(User user, GameWorld gameWorld) throws BloodscribeException {
+
+		gameWorldProvider.createGameWorld(user, gameWorld);
 	}
 
 	@Override
